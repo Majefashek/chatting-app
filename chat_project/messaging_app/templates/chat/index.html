@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting App</title>
+    <link rel="stylesheet" href="{% static 'chat/chat.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'chat/chat.js' %}"></script>
+</head>
+<body>
+    {{sender_id}}
+    <div id='user2' data-id='{{sender_id}}'></div>
+    <div id="users" value="{{sender_id}}">
+        <h3>Users</h3>
+        <ul>
+           {% for user in users %}
+            <li class="user" data-id="{{ user.id }}">{{ user.username }}</li>
+            {% endfor %}
+
+            <!-- Add more users dynamically or through server-side rendering -->
+        </ul>
+    </div>
+    <div id="messages">
+
+        hey
+        <div id="message-input">
+        <form id="message-form">
+            <input type="text" id="message-text" placeholder="Type your message here">
+            <button type="submit">Send</button>
+        </form>
+        <!-- Messages will be displayed here -->
+    </div>
+</body>
+</html>
