@@ -1,35 +1,35 @@
- /* CSS for layout */
-        body {
-            display: flex;
-            justify-content: space-between;
-        }
+/* CSS for layout */
+body {
+	display: flex;
+	justify-content: space-between;
+}
 
-        #users {
-            flex: 1;
-            padding-right: 20px; /* Add some padding for spacing */
-            background-color: #f2f2f2; /* Light gray background */
-            border-right: 1px solid #ccc; /* Gray border on the right */
-        }
+#users {
+	flex: 1;
+	padding-right: 20px; /* Add some padding for spacing */
+	background-color: #f2f2f2; /* Light gray background */
+	border-right: 1px solid #ccc; /* Gray border on the right */
+}
 
-        #messages {
-            flex: 2;
-            padding-left: 20px; /* Add some padding for spacing */
-            background-color: #ffffff; /* White background */
-            border-left: 1px solid #ccc; /* Gray border on the left */
-        }
+#messages {
+	flex: 2;
+	padding-left: 20px; /* Add some padding for spacing */
+	background-color: #ffffff; /* White background */
+	border-left: 1px solid #ccc; /* Gray border on the left */
+}
 
-        /* Additional styling as needed */
-        h3 {
-            margin-top: 0; /* Remove top margin from headings */
-        }
+/* Additional styling as needed */
+h3 {
+	margin-top: 0; /* Remove top margin from headings */
+}
 
-        ul {
-            list-style-type: none; /* Remove default list styling */
-            padding: 0; /* Remove default padding */
-        }
+ul {
+	list-style-type: none; /* Remove default list styling */
+	padding: 0; /* Remove default padding */
+}
 
-        li.user {
-            padding: 10px; /* Add padding to user list items */
-            border-bottom: 1px solid #ccc; /* Gray border on bottom of user list items */
-            cursor: pointer; /* Add pointer cursor to user list items */
-        }
+li.user {
+	padding: 10px; /* Add padding to user list items */
+	border-bottom: 1px solid #ccc; /* Gray border on bottom of user list items */
+	cursor: pointer; /* Add pointer cursor to user list items */
+}
