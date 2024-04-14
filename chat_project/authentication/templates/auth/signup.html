@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-</head>
-<body>
-    <h2>Signup</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Signup</button>
-    </form>
-    <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+		/>
+		<title>Signup</title>
+	</head>
+	<body class="flex justify-center items-center vh-100 w-100">
+		<form
+			method="post"
+			class="flex flex-column ba br3 shadow-1 pa2 w-50-ns w-100"
+		>
+			<h2 class="tc">Signup</h2>
+			<!-- {% csrf_token %}
+        {{ form.as_p }} -->
+			<button type="submit">Signup</button>
+			<p>
+				Already have an account? <a href="{% url 'login' %}">Login here</a>.
+			</p>
+		</form>
+	</body>
 </html>
