@@ -7,20 +7,89 @@
 			rel="stylesheet"
 			href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
 		/>
+		<!-- Styles framework -->
+
+		<link rel="stylesheet" href="./styles.css" />
+		<!-- Styles file -->
 		<title>Signup</title>
 	</head>
-	<body class="flex justify-center items-center vh-100 w-100">
-		<form
-			method="post"
-			class="flex flex-column ba br3 shadow-1 pa2 w-50-ns w-100"
-		>
-			<h2 class="tc">Signup</h2>
-			<!-- {% csrf_token %}
-        {{ form.as_p }} -->
+	<!-- class="flex flex-column justify-center items-center w-100 vh-100" -->
+	<body class="w-100 pa2">
+		<form method="post">
+			<h2>Signup</h2> 
+			{% csrf_token %} {{ form.as_p }}
 			<button type="submit">Signup</button>
 			<p>
 				Already have an account? <a href="{% url 'login' %}">Login here</a>.
 			</p>
 		</form>
+		<!-- <form method="post" class="w-70-ns w-90 center shadow-1 br3 pa2 pr3 pl3">
+			<h2 class="tc">Signup</h2>
+			<div class="flex flex-column mb2">
+				<label for="username">Username: * </label>
+				<input
+					type="text"
+					id="username"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Username"
+					required
+				/>
+                <p class="light-red">150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
+			</div>
+			<div class="flex flex-column mb2">
+				<label for="email">Email: * </label>
+				<input
+					type="email"
+					id="email"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Username"
+					required
+				/>
+			</div>
+			<div class="flex flex-column mb2">
+				<label for="password">Password: </label>
+				<input
+					type="password"
+					id="password"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Password"
+					required
+				/>
+				<ul class="flex flex-column light-red tl">
+					<li class="mb2">
+						Your password can’t be too similar to your other personal
+						information.
+					</li>
+					<li class="mb2">Your password must contain at least 8 characters.</li>
+					<li class="mb2">Your password can’t be a commonly used password.</li>
+					<li class="mb2">Your password can’t be entirely numeric.</li>
+				</ul>
+			</div>
+			<div class="flex flex-column mb2">
+				<label for="confirm_password">Confirm Password: </label>
+				<input
+					type="password"
+					id="confirm_password"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Confirm Password"
+					required
+				/>
+				<p class="light-red">Enter the same password as before, for verification.</p>
+			</div>
+			<div class="mt4 mb2 inline-flex justify-center w-100">
+				<button
+					type="submit"
+					class="white pointer grow w-fc bn shadow-1 bg-light-blue br-pill pa2 pl3 pr3"
+				>
+					Sign Up
+				</button>
+			</div>
+			<div class="tc">
+				<p>Already have an account?</p>
+				<a href="{% url 'login' %}" class="link underline-hover blue"
+					>Signup here</a
+				>.
+			</div>
+		</form> -->
 	</body>
 </html>

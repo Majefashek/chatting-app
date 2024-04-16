@@ -3,9 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+		/>
+		<!-- Styles framework -->
+
+		<link rel="stylesheet" href="./styles.css" />
+		<!-- Styles file -->
+
 		<title>Login</title>
 	</head>
-	<body>
+	<body class="flex flex-column justify-center items-center w-100 vh-100">
 		<form method="post">
 			<h2>Login</h2>
 			{% csrf_token %} {{ form.as_p }}
@@ -14,5 +24,35 @@
 				Don't have an account? <a href="{% url 'signup' %}">Signup here</a>.
 			</p>
 		</form>
+		<!-- <form method="post" class="shadow-1 br3 pa2 pl3 pr3 w-40-ns w-90">
+			<h2 class="tc">Login</h2>
+			<div class="flex flex-column mb2">
+				<label for="username">Username: </label>
+				<input
+					type="text"
+					id="username"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Username"
+				/>
+			</div>
+			<div class="flex flex-column mb2">
+				<label for="password">Password: </label>
+				<input
+					type="password"
+					id="password"
+					class="bn shadow-1 pa1 pl2 pr2 mt2 br-pill"
+					placeholder="Password"
+				/>
+			</div>
+			<div class="mt4 mb2 inline-flex justify-center w-100">
+				<button type="submit" class="white pointer grow w-fc bn shadow-1 bg-light-blue br-pill pa2 pl3 pr3">
+					Login
+				</button>
+			</div>
+			<div class="tc">
+				<p>Don't have an account?</p>
+				<a href="{% url 'signup' %}" class="link underline-hover blue">Signup here</a>.
+			</div>
+		</form> -->
 	</body>
 </html>
